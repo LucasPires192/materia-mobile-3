@@ -6,8 +6,8 @@ const About = () => {
                     <View style={styles.content}>
                         <Text style={styles.title}>Sobre</Text>
                          <Image 
-                            source={require('../img/etec.jpeg')} 
-                            style={styles.etec}
+                            source={require('../img/pessoas.jpeg')} 
+                            style={styles.people}
                             resizeMode="cover"
                         />
                         <Text style={styles.subTitle}>What is Lorem Ipsum?</Text>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         describe: {
             padding: 10,
         },
-        etec: {
+        people: {
             width: '300',
             height: '300',
             marginTop: '30',
