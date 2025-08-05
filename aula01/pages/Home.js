@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <ScrollView style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.title}>Home</Text>
+                <Text style={styles.title}>Página Inicial</Text>
                  <Image 
                     source={require('../img/etec.jpeg')} 
                     style={styles.etec}
@@ -31,7 +31,7 @@ const Home = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffff00',
+        backgroundColor: '#c2c2c2ff',
     },
     content: {
         flex: 1,
@@ -40,10 +40,9 @@ const styles = StyleSheet.create({
     title: {
         marginTop: 16,
         paddingVertical: 8,
-        borderWidth: 4,
+        borderBottomWidth: 4,
         borderColor: '#20232a',
         borderRadius: 6,
-        backgroundColor: '#61dafb',
         color: '#20232a',
         textAlign: 'center',
         fontSize: 30,
@@ -55,6 +54,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         fontWeight: 'bold',
+    },
+    describe: {
+        padding: 10,
     },
     etec: {
         width: '300',
