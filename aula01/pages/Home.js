@@ -11,7 +11,7 @@ const Home = () => {
                     resizeMode="cover"
                 />
                 <View style={styles.countContainer}>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.btnContar}>
                         <Text>Contar</Text>
                     </TouchableOpacity>
                 </View>
@@ -44,6 +44,13 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         alignItems: 'center',
+    },
+    btnContar:{
+        backgroundColor: '#55Acf2',
+        paddingVertical: 10,
+        paddingHorizontal: 25,
+        borderRadius: 5,
+        marginTop: 10,
     },
     title: {
         marginTop: 16,
