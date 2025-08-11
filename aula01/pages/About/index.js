@@ -1,12 +1,14 @@
-import { Text, Image, View, ScrollView, StyleSheet } from 'react-native';
+import { Text, Image, View, ScrollView} from 'react-native';
+import  styles  from './style.js';
+import globalStyles from '../../global-style.js'
 
 const About = () => {
     return (
-        <ScrollView style={styles.container}>
-                    <View style={styles.content}>
+        <ScrollView style={globalStyles.container}>
+                    <View style={globalStyles.content}>
                         <Text style={styles.title}>Sobre</Text>
                          <Image 
-                            source={require('../img/pessoas.jpeg')} 
+                            source={require('../../img/pessoas.jpeg')} 
                             style={styles.people}
                             resizeMode="cover"
                         />
@@ -28,42 +30,6 @@ const About = () => {
             );
 };
 
-const styles = StyleSheet.create({
-    container: {
-            flex: 1,
-            backgroundColor: '#c2c2c2ff',
-        },
-        content: {
-            flex: 1,
-            alignItems: 'center',
-        },
-        title: {
-            marginTop: 16,
-            paddingVertical: 8,
-            borderBottomWidth: 4,
-            borderColor: '#20232a',
-            borderRadius: 6,
-            color: '#20232a',
-            textAlign: 'center',
-            fontSize: 30,
-            fontWeight: 'bold',
-        },
-        subTitle: {
-            marginTop: 16,
-            color: '#20232a',
-            textAlign: 'center',
-            fontSize: 16,
-            fontWeight: 'bold',
-        },
-        describe: {
-            padding: 10,
-        },
-        people: {
-            width: '300',
-            height: '300',
-            marginTop: '30',
-            borderRadius: 10,
-        }
-});
+
 
 export default About;

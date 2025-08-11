@@ -23,8 +23,11 @@ const NavBar = () => {
 
                     return <Ionicons name={iconName} size={size} color={color} />;
                 },
-                tabBarActiveTintColor: '#6200ee',
+                tabBarActiveTintColor: '#383838',
                 tabBarInactiveTintColor: 'gray',
+                tabBarStyle: {
+                    backgroundColor: '#c2c2c2',
+                },
                 headerShown: false,
             })}
         >

@@ -1,20 +1,21 @@
-import { Text, Image, View, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text, Image, View, ScrollView} from 'react-native';
+import BtnContar from '../../components/BtnContar';
+import styles from './style.js';
+import globalStyles from '../../global-style.js'
 
 const Home = () => {
     return (
-        <ScrollView style={styles.container}>
-            <View style={styles.content}>
+        <ScrollView style={globalStyles.container}>
+            <View style={globalStyles.content}>
                 <Text style={styles.title}>Página Inicial</Text>
                  <Image 
-                    source={require('../img/etec.jpeg')} 
+                    source={require('../../img/etec.jpeg')} 
                     style={styles.etec}
                     resizeMode="cover"
                 />
-                <View style={styles.countContainer}>
-                    <TouchableOpacity style={styles.btnContar}>
-                        <Text>Contar</Text>
-                    </TouchableOpacity>
-                </View>
+            
+                <BtnContar />
+               
                 <View style={styles.textContainer}>
                     <Text style={styles.subTitle}>What is Lorem Ipsum?</Text>
                     <Text style={styles.describe}>
@@ -34,58 +35,5 @@ const Home = () => {
         </ScrollView>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#c2c2c2ff',
-        padding: 10,
-    },
-    content: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    btnContar:{
-        backgroundColor: '#55Acf2',
-        paddingVertical: 10,
-        paddingHorizontal: 25,
-        borderRadius: 5,
-        marginTop: 10,
-    },
-    title: {
-        marginTop: 16,
-        paddingVertical: 8,
-        borderBottomWidth: 4,
-        borderColor: '#20232a',
-        color: '#20232a',
-        textAlign: 'center',
-        fontSize: 32,
-        fontWeight: 'bold',
-    },
-    textContainer: {
-        padding: 20,
-        textAlign: 'center',
-        lineHeight: 1.6,
-    },
-    subTitle: {
-        marginTop: 16,
-        color: '#20232a',
-        textAlign: 'center',
-        textDecorationLine: 'underline',
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
-    describe: {
-        fontSize: 16,
-        textAlign: 'justify',
-        lineHeight: 20,
-    },
-    etec: {
-        width: '300',
-        height: '300',
-        marginTop: '30',
-        borderRadius: 10,
-    }
-});
 
 export default Home;
