@@ -1,6 +1,6 @@
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
 
-function App() {
+export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.tituloContainer}>
@@ -9,7 +9,7 @@ function App() {
       <FlatList
         data={animes}
         renderItem={({item}) => 
-          <View style={styles.card}>
+          <View key={item.id} style={styles.card}>
               <Image style={styles.capa}source={item.img}/>
               <Text style={styles.descricao}>Nome: {item.nome}</Text>
               <Text style={styles.descricao}>Estilo: {item.estilo}</Text>
@@ -33,14 +33,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    backgroundColor: '#bc6120ff',
+    width: '100%',
   },
   titulo: {
     fontSize: 32,
     fontWeight: 600,
   },
   card: {
-    border: 'solid #000000 1',
-    backgroundColor: '#de7021ff',
+    borderColor: '#a3541cff',
+    borderWidth: 1,
+    background: '#de7021ff',
     padding: 15,
     marginBottom: 10,
     borderRadius: 10,
@@ -92,5 +95,3 @@ const animes = [
     img: require('./assets/img/capa-one-piece.jpg'),
   }
 ];
-
-export default App;
