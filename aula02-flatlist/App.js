@@ -1,7 +1,7 @@
-import Home from './pages/Home';
+import Navigation from './components/Navigation';
 
 export default function App() {
     return (
-        <Home />
+        <Navigation />
     );
 }
