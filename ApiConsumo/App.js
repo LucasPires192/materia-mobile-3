@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, FlatList } from 'react-native';
+import style from './style.js';
 
 const request = async (callback) => {
     const response = await fetch('https://swapi.dev/api/people/');
@@ -15,9 +16,9 @@ export default function App() {
     }, [])
 
     return (
-        <View>
+        <View style={style.container}>
             <View>
-                <Text>
+                <Text style={style.superior}>
                     StarWars
                 </Text>
             </View>
@@ -26,7 +27,7 @@ export default function App() {
                 data={registros}
                 keyExtractor={(item) => item.name.toString()}
                 renderItem={({item}) =>
-                    <Text>
+                    <Text style={style.item}>
                         <Text>Nome: {item.name}{'\n'}</Text>
                         <Text>Peso: {item.mass}{'\n'}</Text>
                     </Text>
